@@ -1,0 +1,39 @@
+.header {
+  background: $white;
+  border-top: 0.5rem solid $purple;
+
+  &__stick {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.7rem 0;
+
+    @include mq(tab) {
+      flex-direction: row;
+      gap: 2rem;
+      width: 90%;
+    }
+  }
+
+  &__phone {
+    @include mq() {
+      display: none;
+    }
+  }
+}
+
+.navegation {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+
+  @include mq() {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__link {
+    color: #394873;
+  }
+}

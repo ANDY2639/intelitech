@@ -1,0 +1,147 @@
+.benefits {
+  background-image: $gradient3;
+  border-radius: 1.5rem;
+  width: 124.7rem;
+  margin: 0 auto;
+  padding: 7.9rem 6.6rem;
+  color: $white;
+
+  @include mq(mob) {
+    width: 90%;
+    padding: 0;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 3.64rem;
+    width: 37.7rem;
+
+    @include mq(mob) {
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 3rem;
+    }
+  }
+
+  &__items {
+    counter-reset: section;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+
+    @include mq(mobS) {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+  }
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include mq(mob) {
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  &__image {
+    max-width: 35rem;
+
+    @include mq(mob) {
+      margin: 0 auto;
+    }
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 3.64rem;
+
+    @include mq(mob) {
+      font-size: 2.4rem;
+      line-height: 2.4rem;
+    }
+
+    &::before {
+      counter-increment: section;
+      content: counter(section);
+      background: $orange1;
+      color: $white;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 2.4rem;
+      padding: 0.1rem 0.7rem;
+      border-radius: 50%;
+      vertical-align: baseline;
+    }
+  }
+
+  &__description {
+    font-weight: 400;
+    line-height: 2.4rem;
+
+    @include mq(mob) {
+      text-align: justify;
+    }
+  }
+}
+
+.testimonials-full {
+  display: flex;
+  gap: 3rem;
+}
+
+.person {
+  display: flex;
+  gap: 2.4rem;
+  background: $white;
+  padding: 4.5rem 1.5rem;
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+  @include mq(mobS1) {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  &__pic {
+    width: 14rem;
+    height: 14rem;
+
+    @include mq(mobS1) {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__comentary {
+    color: $blueDark;
+
+    @include mq(mobS) {
+      text-align: justify;
+    }
+  }
+
+  &__name {
+    color: $blueDark;
+    font-weight: 600;
+    line-height: 2.4rem;
+  }
+
+  &__charge {
+    color: #989898;
+  }
+}

@@ -1,0 +1,64 @@
+@mixin mq($media: mob, $type: max) {
+  @if type-of($media) == number {
+    @if unitless($media) {
+      @media only screen and (#{$type}-width: $media + px) {
+        @content;
+      }
+    }
+  } @else {
+    @if type-of(map-get($mediaqueries, $media)) == number {
+      @media only screen and (#{$type}-width: map-get($mediaqueries, $media) + px) {
+        @content;
+      }
+    } @else if type-of(map-get($mediaqueries, $media)) == string {
+      @media #{map-get($mediaqueries, $media)} {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin gridc($columns, $spacing) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $spacing;
+}
+
+@mixin gridr($rows, $spacing) {
+  display: grid;
+  grid-template-rows: repeat($rows, 1fr);
+  gap: $spacing;
+}
+
+/* ITERATIONS */
+
+// Margins and Paddings
+@for $i from 0 through 20 {
+  $value: $i * 5;
+  // Margin
+  .mt#{$i} {
+    margin-top: #{$value}px !important;
+  }
+  .mb#{$i} {
+    margin-bottom: #{$value}px !important;
+  }
+  .mr#{$i} {
+    margin-right: #{$value}px !important;
+  }
+  .ml#{$i} {
+    margin-left: #{$value}px !important;
+  }
+  // Padding
+  .pt#{$i} {
+    padding-top: #{$value}px !important;
+  }
+  .pb#{$i} {
+    padding-bottom: #{$value}px !important;
+  }
+  .pr#{$i} {
+    padding-right: #{$value}px !important;
+  }
+  .pl#{$i} {
+    padding-left: #{$value}px !important;
+  }
+}

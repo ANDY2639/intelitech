@@ -1,0 +1,76 @@
+.contact {
+  max-width: 129rem;
+  width: 129rem;
+  margin: 0 auto;
+  background: $white;
+  border-radius: 16px 0px 0px 16px;
+  @include gridc(2, 1rem);
+
+  @include mq(mob) {
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+  }
+
+  &__info,
+  &__form {
+    padding: 3.2rem;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 3.64rem;
+  }
+}
+
+.contact2 {
+  max-width: 129rem;
+  width: 129rem;
+  margin: 0 auto;
+  background: $white;
+  border-radius: 16px 0px 0px 16px;
+  @include gridc(2, 1rem);
+
+  @include mq(mob) {
+    width: 90%;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+  }
+
+  &__info,
+  &__form {
+    padding: 3.2rem;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 3.64rem;
+  }
+}
+
+.info {
+  position: relative;
+  max-width: 40.4rem;
+  width: 40.4rem;
+  background: #f8f8fb;
+  padding: 1.8rem 1.5rem 1.2rem 3.8rem;
+  border-radius: 1rem;
+
+  &__ico {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%) translateY(25%);
+    border-radius: 100%;
+    background: $orange1;
+    padding: 1.5rem;
+
+    i {
+      color: $white;
+    }
+  }
+}

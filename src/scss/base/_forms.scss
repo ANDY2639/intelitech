@@ -1,0 +1,25 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+button[type="button"],
+button[type="reset"],
+button[type="submit"],
+textarea {
+  border: none;
+  outline: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &-control {
+    align-items: center;
+    padding: 1.4rem 1.6rem;
+    width: 100%;
+    background: #f8f8fb;
+    border-radius: 5px;
+  }
+}
